@@ -1,3 +1,4 @@
+import './routes';
 import server from '@config/server'
 
 const respond = (req, res, next) => {
