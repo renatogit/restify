@@ -22,10 +22,9 @@ export const createUser = async (req, res, next) => {
   data.password = password;
   const user = new User(data);
   const userById = await User.findOne({ userName: req.params.data.userName }).exec();
-  console.log('\x1b[35muserById', userById);
 
   if (!!userById) {
-    res.send('O usuario já está cadastrado');
+    res.send('O usuario já está cadastrado da base de dados!!!');
   } else {
     await user.save((err) => {
       if (err) return console.log(err);

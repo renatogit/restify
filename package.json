@@ -6,16 +6,19 @@
   "scripts": {
     "babel-node": "babel-node --presets='@babel/preset-env' --ignore='foo|bar|baz'",
     "start": "nodemon --exec yarn babel-node -- src/index.js",
-    "create:tasks":"nodemon --exec yarn babel-node -- src/lib/task/dev.js",
-    "drop:tasks":"nodemon --exec yarn babel-node -- src/lib/task/clear.js",
+    "create:tasks": "nodemon --exec yarn babel-node -- src/lib/task/dev.js",
+    "drop:tasks": "nodemon --exec yarn babel-node -- src/lib/task/clear.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Renato Oliveira",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.10",
-    "restify": "^8.5.1"
+    "restify": "^8.5.1",
+    "restify-errors": "^8.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",

@@ -12,39 +12,42 @@ const emailSchema = mongoose.Schema({
   country: { type: String, trim: true },
 });
 
-const userSchema = mongoose.Schema({
-  firstName: {
-    type: String,
-    required: true,
-    trim: true,
+const userSchema = mongoose.Schema(
+  {
+    firstName: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    lastName: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    userName: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    email: {
+      type: String,
+      trim: true,
+    },
+    cpf: {
+      type: String,
+      trim: true,
+    },
+    password: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    address: emailSchema,
+    area: [],
+    professionalPosition: [],
   },
-  lastName: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  userName: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  email: {
-    type: String,
-    trim: true,
-  },
-  cpf: {
-    type: String,
-    trim: true,
-  },
-  password: {
-    type: String,
-    required: true,
-    trim: true,
-  },
-  address: emailSchema,
-  area: [],
-  professionalPosition: [],
-});
+  { versionKey: false }
+);
 
 const User = mongoose.model('User', userSchema);
 export default User;
